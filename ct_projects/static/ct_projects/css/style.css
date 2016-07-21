@@ -1,0 +1,190 @@
+/* General use classes */
+.green-text {
+    color: #2ECC71;
+}
+
+.centered {
+    text-align: center;
+}
+
+.pagination .current {
+    background: #28102d;
+    color: #fff;
+    cursor: default;
+}
+
+.follow-button {
+    min-width: 100px;
+}
+
+.project-search input {
+    vertical-align: top;
+    color: #ddd;
+    padding-right: 40px;
+}
+
+.project-search input[type="search"] {
+    height: 25px;
+}
+
+form.ct_projects_form input[type="text"], form.ct_projects_form textarea {
+    width: 100%;
+}
+
+.info {
+    color: #aaa;
+}
+
+/* Rating */
+.rating-input {
+    color: #1C2B36;
+}
+
+.rating-input.active:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* Profile overview */
+
+.custom-tooltip a {
+    color: #ddd !important;
+}
+
+.custom-tooltip a:hover, .custom-tooltip a:focus {
+    color: whitesmoke !important;
+}
+
+.public-overview-data .vertical-align .middle table tr td {
+    width: 50% !important;
+}
+
+.public-overview-data.public-project-overview-data .vertical-align .middle:first-of-type {
+    width: 50%;
+}
+
+.public-overview-data.public-project-overview-data .vertical-align .middle:nth-of-type(2) {
+    width: 40%;
+}
+
+.public-overview-data.public-project-overview-data .vertical-align .middle:nth-of-type(3) {
+    width: 10%;
+}
+
+/* Project teasers */
+.public-overview-data.public-project-campaign-overview-data .vertical-align .middle:first-child {
+    width: 40%;
+}
+
+section.user-dashboard-projects-content {
+    width: 100%;
+}
+
+.project .background {
+    border-top: 1px solid #ebebeb;
+}
+
+.project .background .background-image {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    z-index: 0;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+}
+
+/* Project details, ideas & comments */
+.public-project-overview-content > header.main-header {
+    background-position: center;
+}
+
+.idea .data .fa {
+    color: #b1b1b1;
+    margin-right: 10px;
+}
+
+.like-button button {
+    border: none;
+    background: none;
+}
+
+.form-post-idea input[type="submit"] {
+    width: calc(100% - 115px);
+    border-radius: 5px 0 0 5px;
+}
+
+.form-post-idea .hide-idea-form {
+    border-radius: 0 5px 5px 0;
+}
+
+.campaign .article-header h3 {
+    width: calc(100% - 25px);
+}
+
+.campaign footer .btn {
+    /*width: calc(100% - 10px);
+    padding: 10px;*/
+}
+
+/* Polls & documents */
+.header-medium.campaign-bookmark {
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 300px;
+    margin: 20px 15px;
+}
+
+.campaign-poll .article-header {
+    margin-bottom: 0 !important;
+}
+
+/* Terms and Conditions */
+.terms-and-conditions {
+    text-align: justify;
+}
+
+.terms-and-conditions h1 {
+    color: #424242;
+}
+
+/* Notifications */
+a.notification-link {
+    margin-bottom: 20px;
+    display: block;
+    color: #424242;
+}
+
+.empty-dashboard {
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.empty-dashboard a {
+    text-decoration: underline;
+}
+
+/* Completed campaigns - fix #125 */
+.completed-campaigns {
+    font-size: 15px;
+}
+
+/* Search term header - fix #153 */
+.search-term-header {
+    word-wrap: break-word;
+    width: 100%;
+}
+
+/* Fixed #209 */
+.form-post-idea.form-full input[type="submit"] {
+    width: calc(100% - 195px);
+}
+
+.form-post-idea.form-full .btn.pull-right {
+    border-radius: 0 5px 5px 0;
+}

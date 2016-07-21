@@ -1,0 +1,22 @@
+*.pyc
+*.sqlite3
+*.json
+
+# Pycharm
+*.idea
+.idea/
+
+config.py
+
+# Bower Components
+activitytracker/static/bower_components
+
+# CACHED CSS/JS
+static/CACHE
+
+# user avatars
+avatars/*
+
+# passwords
+passwords.py
+Activitytracker_Project/passwords.py

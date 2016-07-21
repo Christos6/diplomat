@@ -1,0 +1,153 @@
+a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download) {
+    transition: color 0.3s ease-in-out;
+}
+
+body > section.dashboard-page a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download),
+header a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download),
+header a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download) {
+    color: #ddd;
+}
+
+body > section.dashboard-page a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):hover,
+body > header a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):hover,
+body > header a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):focus{
+    color: whitesmoke;
+}
+
+main a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download),
+.public-project-overview-content .container a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download),
+.public-project-overview-content .container a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download) {
+    color: #7d3c8c;
+}
+
+main a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):hover,
+.public-project-overview-content .container a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):hover,
+.public-project-overview-content .container a:not(.btn):not(.btn-confirm):not(.btn-decline):not(.btn-download):hover {
+    color: #38173f;
+}
+
+section.public-page {
+    min-height: calc(100vh - 520px);
+}
+
+.profile-avatar {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+header .input-search {
+    color: #ddd;
+}
+
+.coming-soon {
+    text-transform: uppercase;
+    font-size: .8em;
+    background: yellow;
+    padding: 5px;
+    color: #777;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav-tabs.nav-stacked > li:last-child > a {
+    margin-bottom: 0 !important;
+}
+
+body > header .global-nav .container > ul li.profile.login-link:before {
+    background: none;
+}
+
+.breadcrumb {
+    background: none;
+}
+
+h1 {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.social-media li:first-of-type {
+    display: block;
+}
+.social-media li {
+    padding-right: 20px;
+    display: inline-block;
+}
+
+/* Hotfix - settings */
+.connected-app img {
+    width: 100px;
+}
+
+.complete-profile.active.hide-all {
+    background: #411f48 !important;
+}
+
+.complete-profile.active.hide-all * {
+    visibility: hidden !important;
+}
+
+/* Aside */
+section.dashboard-page > .container > .content > .row > aside .show-minimized {
+    display: none; }
+  section.dashboard-page.minimized > .container > .content > .row > aside .hide-minimized {
+    display: none; }
+  section.dashboard-page.minimized > .container > .content > .row > aside .show-minimized {
+    display: block; }
+  section.dashboard-page.minimized > .container > .content > .row > aside .minimize-sidepanel {
+    text-align: center;
+    margin: 10px auto; }
+        .dashboard-page.minimized aside li span {
+      display: none; }
+
+
+/* Minimized aside */
+.minimize-toggle:hover {
+    color: white !important;
+    cursor: pointer;
+}
+
+.dashboard-side-menu.minimized {
+  width: auto;
+}
+
+.dashboard-side-menu.minimized h1.header-small,
+.dashboard-side-menu.minimized .minimize-toggle .fold-back,
+.dashboard-side-menu.minimized .member .information,
+.dashboard-side-menu.minimized .side-menu ul li a span,
+.dashboard-side-menu.minimized .bottom {
+   display: none;
+}
+
+.dashboard-side-menu.minimized .minimize-toggle {
+    padding-top: 10px;
+}
+
+.dashboard-side-menu.minimized .profile-picture {
+    padding: 0;
+    width: auto;
+}
+
+.dashboard-side-menu.minimized .profile-avatar {
+    height: 30px !important;
+    width: 30px;
+    margin: 0 auto;
+}
+
+/* Login */
+.social-login > img {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.social-login > img:hover {
+    opacity: 1;
+}

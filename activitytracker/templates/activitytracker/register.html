@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% load url from future %}
+{% load project_tags %}
+{% load staticfiles %}
+{% block title %}Register{% endblock %}
+{% block section_class %}page-login{% endblock %}
+{% block wrapper %}{% endblock %}
+
+{% block menu %}{% endblock %}
+{% block content %}
+    <main>
+        <form action="{% url 'register' %}" method="POST"  >
+			<header class="main-header login">
+				<div class="container">
+					<h1 class="header-extra-large public">Welcome</h1>
+					<p class="public-page-subtitle">Please <a href="{% url 'login' %}">log in</a> or register to continue</p>
+				</div>
+			</header>
+
+			<section class="public-projects-logged-in-content">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-offset-3 col-md-6">
+
+                            <div class="content form-section">
+                                {% csrf_token %}
+
+                                {% if errors %}
+                                    <div class="has-error">
+                                        {% for error in errors %}
+                                            <p class="help-block">{{ error }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+                                <fieldset>
+                                    <label for="username" class="header-medium secondary">Username</label>
+
+                                    <div class="input-container">
+                                        <i class="icon icon-edit"></i>
+                                        <input type="text" id="username" name="username" placeholder="You" value="{{ username }}">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="username" class="header-medium secondary">Email</label>
+
+                                    <div class="input-container">
+                                        <i class="icon icon-edit"></i>
+                                        <input type="text" id="email" name="email" placeholder="you@test.com" value="{{ email }}">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="password" class="header-medium secondary">Password</label>
+
+                                    <div class="input-container">
+                                        <i class="icon icon-edit"></i>
+                                        <input type="password" id="password" name="password" placeholder="Secret">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password" class="header-medium secondary">Password (again)</label>
+
+                                    <div class="input-container">
+                                        <i class="icon icon-edit"></i>
+                                        <input type="password" id="password_repeat" name="password_repeat" placeholder="Secret">
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="button-end">
+                                <button type="submit" class="btn big">Register</button>
+                                <p>Or register with one of your social accounts:</p>
+                                <div class="social-login text-center">
+                                    <img src="{% static 'activitytracker/img/facebook-login.png' %}" style="width:50px; height:50px;" onclick="window.open('{% url 'social:begin' 'facebook' %}', 'newwindow', 'width=500, height=500')">
+                                    <img src="{% static 'activitytracker/img/google-login.png' %}" style="width:50px; height:50px;" onclick="window.open('{% url 'social:begin' 'google-oauth2' %}', 'newwindow', 'width=500, height=500')">
+                                </div>
+                                <p>Not sure which account is right for you? <a href="#nowhere">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </main>
+{% endblock %}

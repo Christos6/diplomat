@@ -1,0 +1,67 @@
+{% extends "base_non_authenticated.html" %}
+{% load staticfiles %}
+{% load custom_templates %}
+
+{% block content %}
+
+    {% if action == "AuthCancelled" %} //do nothing
+        <script>window.close()</script>;
+    {% elif action == "RegisteredUser" %}
+        <script>
+        window.onunload = function (e) {
+            window.opener.LoadingWithBackdrop();
+        };
+        window.opener.location.reload();
+        window.close()
+        </script>
+    {% elif action == "NewUser" %}
+        <script>
+        window.onunload = function (e) {
+            window.opener.LoadingWithBackdrop();
+        };
+        window.opener.location.href = '{% url 'index' 'NewUser' %}';
+        window.close()
+        </script>
+    {% elif action == "Sync" %}
+        <script>
+        window.onunload = function (e) {
+            window.opener.synchronizeProvider('{{ provider }}');
+        };
+        window.close()
+        </script>
+    {% else %}
+        <div class="login-box col-md-offset-4 col-md-4">
+
+            <div class="row">
+                <div class="col-xs-offset-3 col-xs-6">
+                    <img src="{% static 'activitytracker/img/cloudteams-logo.svg' %}" alt="Cloudteams Logo" class="img-responsive center-block">
+                </div>
+                <h1 class="text-center col-xs-12">Login Failed</h1>
+            </div>
+            <hr>
+            <div class="row">
+                <h3 class="error-message">
+                {% if action == "InactiveUser" %}
+                    Login via social community failed.
+                    This is caused because you have a registered but unverified account that shares the
+                    same e-mail address as the service you tried to log in with. Please visit your e-mail address
+                    and verify your account using the link from the email we have sent you during registration time.
+
+                {% elif action == "LoginFailed" %}
+                    Login via social community failed.
+                    An unknown error has occured that prevented the request from being fullfilled. If this is
+                    persistent, please consider registering manually to Activity Tracker.
+                {% else %}
+                    Oops! Something must have went wrong, please try to repeat your original action
+                {% endif %}
+                </h3>
+            </div>
+            <hr>
+            <div class="row">
+                <h3>If not closed manually, page will close in 30 seconds</h3>
+                <script>setTimeout(function(){ window.close(); }, 30000);</script>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% extends "ct_projects/base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+
+{% block title %}Projects{% endblock %}
+{% block section_class %}page-public-projects-logged-in{% endblock %}
+{% block pre_content %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="header-extra-large public">Cloudteams</h1>
+            <p class="public-page-subtitle">Collect rewards for giving feedback</p>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    {% with projects=page_obj.object_list %}
+        <main>
+            <div class="container">
+                <section class="public-projects-logged-in-content">
+                    <header>
+                        <h2 class="header-large public search-term-header">
+                            {% if q %}
+                                Search results for {{ q }}
+                            {% else %}
+                                Latest projects
+                            {% endif %}
+                        </h2>
+                        {% if q %}
+                            <p class="header-small action-text"><a href="/projects/">See all</a></p>
+                        {% endif %}
+
+                        {% if not q %}
+                            <div class="filter-container">
+                                <label for="filter-projects">Sort projects</label>
+                                <div class="select-dropdown">
+                                    <i class="fa fa-angle-down"></i>
+                                    <select name="order-projects" id="order-projects" size="1">
+                                        <option value="latest" {% if order == 'latest' %}selected="selected"{% endif %}>Latest</option>
+                                        <option value="most-popular" {% if order == 'most-popular' %}selected="selected"{% endif %}>Most popular</option>
+\                                    </select>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </header>
+
+                    <div class="row">
+                        {% if q and not projects %}
+                            <p class="col-xs-12">No results</p>
+                        {% else %}
+                            {% include "ct_projects/project/list.html" %}
+                        {% endif %}
+                    </div>
+
+                    {% include "ct_projects/util/paginator.html" %}
+                </section>
+            </div>
+        </main>
+    {% endwith %}
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        $(function() {
+            $('#order-projects').on('change', function() {
+                console.log('la!');
+                window.location.href = '/projects/?order=' + $(this).val();
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Basic information</h2>
+
+    <div class="row">
+        <div class="hidden">
+            {{form.profile_picture}}
+        </div>
+
+        <div class="col-xs-4">
+            <div id="avatar-container">
+                <div class="avatar-img" {% if p.profile_picture %}style="background-image: url(/media/{{p.profile_picture}});"{% endif %} ></div>
+            </div>
+            <div class="btn btn-primary" id="trigger-avatar-upload">Upload an avatar</div>
+        </div>
+
+        <div class="col-xs-8">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="id_first_name">Your first name</label><br />
+                    {{ form.first_name }}
+                </div>
+                <div class="col-sm-6">
+                    <label for="id_last_name_initial">The initial of your last name</label><br />
+                    {{ form.last_name_initial }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="id_year_of_birth">Birth year</label><br />
+                    {{ form.year_of_birth }}
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="id_location">Where do you live (only city)?</label><br />
+                    {{ form.location }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

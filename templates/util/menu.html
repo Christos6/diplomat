@@ -1,0 +1,87 @@
+        {% load staticfiles %}
+
+		<header>
+			<nav class="global-nav">
+				<div class="container">
+					<ul>
+						<li class="brand">
+							<div class="vertical-align">
+								<div class="middle">
+									<a href="{% url 'all-projects' %}" alt="home">
+										<img src="{% static "img/logo-white.svg" %}" class="logo svg" alt="Cloudteams logo">
+									</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="search">
+							<div class="vertical-align">
+								<form class="project-search middle" action="/projects/" method="GET">
+									<input name="q" class="input-search" type="text" placeholder="Search projects" value="{{ q }}" autocomplete="false" />
+									<img src="{% static "img/icons/icon-search.svg" %}" class="icon-search svg" alt="Search icon">
+								</form>
+							</div>
+						</li>
+
+						<li>
+							<div class="vertical-align">
+								<div class="middle">
+									<a href="{% url 'all-projects' %}">
+										<img class="icon menu-icon svg" src="{% static "img/icons/icon-projects.svg" %}">
+										All projects
+									</a>
+								</div>
+							</div>
+						</li>
+
+						{% if request.user.is_authenticated %}
+							<li>
+								<div class="vertical-align">
+									<div class="middle">
+										<a href="{% url 'followed-projects' %}">
+											<img class="icon menu-icon svg" src="{% static "img/icons/icon-dashboard.svg" %}">
+											Dashboard
+										</a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="vertical-align">
+									<div class="middle">
+										<a href="{% url 'notifications' %}">
+											<img class="icon menu-icon svg" src="{% static "img/icons/icon-notifications.svg" %}">
+											Notifications
+										</a>
+									</div>
+								</div>
+							</li>
+						{% endif %}
+
+						<li class="profile{% if not request.user.is_authenticated %} login-link{% endif %}">
+							<div class="vertical-align">
+								<div class="middle">
+									{% if request.user.is_authenticated %}
+										<img class="icon menu-icon svg" src="{% static "img/icons/icon-profile.svg" %}">
+										<a href="/profile/">{{ request.user.username }}</a>
+
+										<i class="fa fa-angle-down"></i>
+									{% else %}
+										{% if not ignore_login_link %}
+											<a href="/activitytracker/login/?next=/profile/">Login</a>
+										{% endif %}
+									{% endif %}
+								</div>
+							</div>
+
+							{% if request.user.is_authenticated %}
+								<ul class="submenu">
+									<li><a href="{% url 'settings' %}">Settings</a></li>
+									<li><a href="{% url 'logout' %}">Log out</a></li>
+								</ul>
+							{% endif %}
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>

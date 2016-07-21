@@ -1,0 +1,126 @@
+{% load staticfiles %}
+{% load custom_templates %}
+
+    <!-- Modal detailing the activity -->
+
+<div class="modal-header box-header" style='border-bottom:6px solid {{ color }} !important'>
+    <h2 class="text-center"><i class="halflings-icon list-alt white"></i><span class="break" ></span>{{ instance.activity }} Details</h2>
+</div>
+<div class="modal-body row">
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-star show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if not performs_provider_instance %}
+                {{ instance.activity }}
+            {% else %}
+                <a href="{{ performs_provider_instance.provider_instance_url }}" target="_blank">{{ instance.activity }}</a>
+            {% endif %}
+        </span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-clock-o show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">{{ start_date }} &nbsp;&nbsp; - &nbsp;&nbsp; {{ start_t }}  (Started)</span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-repeat show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">{{ end_date }} &nbsp;&nbsp; - &nbsp;&nbsp; {{ end_t }}  (Ended)</span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-flag show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if instance.goal %}
+                {{ instance.goal }}
+            {% else %}
+                n/a
+            {% endif %}
+            &nbsp&nbsp
+            {% if instance.goal_status == 'Reached'  %}
+                <i class="fa fa-ok"></i>
+            {% elif instance.goal_status == 'Failed' %}
+                <i class="fa fa-remove"></i>
+            {% elif instance.goal_status == 'InProgress' %}
+                <i class="fa fa-road"></i>
+            {% endif %}
+        </span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-check-circle-o show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if instance.result %}
+                {{ instance.result}}
+            {% else %}
+                n/a
+            {% endif %}
+        </span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-tags show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if instance.friends %}
+                {{ instance.friends|addSpaceAfterComma }}
+            {% else %}
+                n/a
+            {% endif %}
+        </span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-wrench show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if tools %}
+                {{ tools }}
+            {% else %}
+                n/a
+            {% endif %}
+        </span>
+    </div>
+    <div class="display-canvas col-xs-8 col-xs-offset-3">
+        <span class="col-xs-2 col-xxs-12 fa fa-map-marker show-activity-glyphicon" aria-hidden="true"></span>
+        <span class="show-activity-text col-xs-8 col-xxs-12">
+            {% if instance.location_address %}
+                {{ instance.location_address }}
+            {% else %}
+                n/a
+            {% endif %}
+        </span>
+    </div>
+    {% if instance.location_address %}
+        <div id="map-canvas-show" class="col-xs-12 map-canvas"></div>
+    {% endif %}
+</div>
+<div class="modal-footer">
+     <a class="showactivityheaderedit btn btn-transparent margin-right-1" id="editactivity">
+        <i class="fa fa-edit"></i> Edit
+     </a>
+     <a class="showactivityheaderdelete btn btn-transparent margin-left-1" id="deleteactivity" onclick="handleActivityDelete('{% url 'deleteactivity' instance.id %}')">
+        <i class="fa fa-trash-o"></i> Delete
+     </a>
+    <a href="#" class="btn btn-primary margin-top-3" id='closeModal' data-dismiss="modal">Close</a>
+</div>
+
+
+<script>
+
+    $('#editactivity').click(function(e) {
+        e.preventDefault();
+		e.stopPropagation();
+        $('#showActivityModal').modal('hide');
+		$('#editActivityModal').modal({
+		  remote: "{% url 'editactivity' instance.id %}"
+	   });
+    });
+
+    var mapShow;
+    function initializeShowMap() {
+        var mapCanvas = document.getElementById('map-canvas-show');
+        var marker = new google.maps.Marker({});
+        var lat = {{ instance.location_lat }};
+        var lng = {{ instance.location_lng }};
+        marker.setPosition({lat:lat, lng:lng});
+        var mapOptions = {
+          center: {lat:lat, lng:lng},
+          zoom: 16
+        };
+        mapShow = new google.maps.Map(mapCanvas, mapOptions);
+        marker.setMap(mapShow);
+    }
+</script>

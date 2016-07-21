@@ -1,0 +1,21 @@
+path.slice{
+    stroke-width:2px;
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+svg {
+    overflow: visible !important;
+}
+
+.dropdown-menu.daterangepicker .ranges li {
+    border: 1px solid #f5f5f5 !important;
+    margin-bottom: 8px !important;
+    padding: 3px 12px !important;
+
+}
