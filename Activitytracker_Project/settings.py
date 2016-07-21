@@ -61,6 +61,7 @@ INSTALLED_APPS = (
 
     # Profile wizard app - allows customers to quickly setup their profile
     'profile',
+    'diplomatiki'
 )
 
 MIDDLEWARE_CLASSES = (

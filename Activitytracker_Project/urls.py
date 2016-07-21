@@ -12,6 +12,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^activitytracker/', include('activitytracker.urls')),
+    url(r'^diplomatiki/', include('diplomatiki.urls')),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
 
     # projects

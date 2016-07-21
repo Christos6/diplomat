@@ -1,0 +1,8 @@
+{% extends 'diplomatiki/base.html' %}
+
+{% block content %}
+    {% for obj in objects %}
+        <h1>Hello {{ obj.username }}</h1>
+    {% endfor %}
+
+{% endblock %}

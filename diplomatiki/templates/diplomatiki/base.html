@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Diplomat</title>
+
+		<link rel="stylesheet" href="{% static "diplomatiki/css/style.css" %}">
+		{% block css %}
+
+        {% endblock %}
+	</head>
+
+	<body>
+		{% block content %}
+        {% endblock %}
+    </body>
+</html>
