@@ -1,0 +1,32 @@
+{% extends 'diplomatiki/base.html' %}
+
+{% block body %}
+<!--load the path to my static files -->
+
+
+    <h2>Users that have instances in the ontology database:</h2>
+
+        <table class="gridtable">
+        <thead>
+            <tr>
+                <th><h3>Iosif</h3></th>
+                <th><h3>Christos</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h4><a href="/diplomatiki/iosifactivities/">Iosif Activities</a></h4>
+                </td>
+                <td>
+                    <h4><a href="/diplomatiki/christosactivities/">Christos Activities</a></h4>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <p><h3>Click <a href="/diplomatiki/commonactivities/">Common Activities</a> to see the activities the users have in common.</h3></p>
+    <p></p>
+    <p><h3>Click <a href="/diplomatiki/allactivityentries/">Activity Entries</a> to see the entries of the users for every activity .</h3></p>
+
+{% endblock %}

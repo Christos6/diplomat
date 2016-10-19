@@ -1,0 +1,23 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+    <h2>Activities of user Christos</h2>
+    <table class="gridtable">
+        <thead>
+            <tr>
+               <th><h3>Christos Activities</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data.results.bindings  %}
+                <tr>
+                    <td>
+                        <h3>{{ record.Activity.value }}</h3>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p></p>
+    <h3><a href="https://dydra.com/alvertisjo/finalontology/christosactivities.html">Endpoint URL</a></h3>
+
+{% endblock %}

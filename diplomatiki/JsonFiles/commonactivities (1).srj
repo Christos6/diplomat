@@ -1,0 +1,29 @@
+{
+  "head": {
+    "vars": [
+      "CommonActivities"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "CommonActivities": {
+          "type": "literal",
+          "value": "Running"
+        }
+      },
+      {
+        "CommonActivities": {
+          "type": "literal",
+          "value": "Social media browsing"
+        }
+      },
+      {
+        "CommonActivities": {
+          "type": "literal",
+          "value": "Status update"
+        }
+      }
+    ]
+  }
+}

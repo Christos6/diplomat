@@ -1,0 +1,44 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+
+    <h2>Frequency of running</h2>
+    <table class="gridtable">
+        <thead>
+            <tr>
+                <th><h3>Iosif Entries</h3></th>
+                <th><h3>Christos Entries</h3></th>
+                <th><h3>Iosif Total Entries</h3></th>
+                <th><h3>Christos Total Entries</h3></th>
+                <th><h3>Iosif Frequency</h3></th>
+                <th><h3>Christos Frequency</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data.results.bindings %}
+                <tr>
+                    <td>
+                        <h3>{{ record.IosifActivityEntries.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.ChristosActivityEntries.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.IosifTotalEntries.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.ChristosTotalEntries.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.IosifActivityFrequency.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.ChristosActivityFrequency.value }}</h3>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p></p>
+    <h3><a href="https://dydra.com/alvertisjo/finalontology/runningfrequency.html">Endpoint URL</a></h3>
+
+{% endblock %}

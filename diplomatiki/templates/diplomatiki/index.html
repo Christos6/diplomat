@@ -1,8 +1,15 @@
 {% extends 'diplomatiki/base.html' %}
+{% block body %}
+<!--load the path to my static files -->
 
-{% block content %}
-    {% for obj in objects %}
-        <h1>Hello {{ obj.username }}</h1>
+
+
+<h2>Activity List</h2>
+
+<ul>
+    {% for activity in all_activities %}
+    <li><h3><a href="/diplomatiki/index/{{ activity.pk }}/">{{ activity.activity_name }}</a></h3></li>
     {% endfor %}
+</ul>
 
 {% endblock %}

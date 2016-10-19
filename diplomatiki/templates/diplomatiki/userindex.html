@@ -1,0 +1,17 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+<!--load the path to my static files -->
+
+
+
+<h2>User List</h2>
+
+<ul>
+    {% for user in all_users %}
+        {% if user.first_name %}
+            <li><h3><a href="/diplomatiki/userindex/{{ user.id }}/">{{ user.first_name }}</a></h3></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}

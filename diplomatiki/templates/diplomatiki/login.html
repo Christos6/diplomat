@@ -1,0 +1,25 @@
+{% extends 'diplomatiki/base.html' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+
+
+
+
+
+
+
+  {% if form.errors %}
+    <p class="error"><h3>Sorry, that's not a valid username or password</h3></p>
+  {% endif %}
+
+  <form action="/diplomatiki/auth/" method="post">{% csrf_token %}
+    <label for="username"><h3>User name:</h3></label>
+    <input type="text" name="username" value="" id="username">
+    <label for="password"><h3>Password:</h3></label>
+    <input type="password" name="password" value="" id="password">
+
+    <input type="submit" value="login" />
+
+  </form>
+
+{% endblock %}

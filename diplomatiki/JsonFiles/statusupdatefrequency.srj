@@ -1,0 +1,53 @@
+{
+  "head": {
+    "vars": [
+      "Activity",
+      "IosifActivityEntries",
+      "ChristosActivityEntries",
+      "IosifTotalEntries",
+      "ChristosTotalEntries",
+      "IosifActivityFrequency",
+      "ChristosActivityFrequency"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "statusupdate"
+        },
+        "IosifActivityEntries": {
+          "type": "literal",
+          "value": "8",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        },
+        "ChristosActivityEntries": {
+          "type": "literal",
+          "value": "2",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        },
+        "IosifTotalEntries": {
+          "type": "literal",
+          "value": "20",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        },
+        "ChristosTotalEntries": {
+          "type": "literal",
+          "value": "15",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        },
+        "IosifActivityFrequency": {
+          "type": "literal",
+          "value": "0.4",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#decimal"
+        },
+        "ChristosActivityFrequency": {
+          "type": "literal",
+          "value": "0.13333334",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#decimal"
+        }
+      }
+    ]
+  }
+}

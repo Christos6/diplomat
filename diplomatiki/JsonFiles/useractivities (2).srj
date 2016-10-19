@@ -1,0 +1,102 @@
+{
+  "head": {
+    "vars": [
+      "Username",
+      "Activity"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Status update"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Social media browsing"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Video watching"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Running"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Video upload"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Share\/retweet"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Status update"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Social media browsing"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "Running"
+        }
+      }
+    ]
+  }
+}

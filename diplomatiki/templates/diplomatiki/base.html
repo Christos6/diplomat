@@ -1,21 +1,61 @@
-{% load staticfiles %}
-{% load static %}
-
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Diplomat</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}MyProject{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'diplomatiki/css/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-		<link rel="stylesheet" href="{% static "diplomatiki/css/style.css" %}">
-		{% block css %}
+</head>
+<body>
 
-        {% endblock %}
-	</head>
+    <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- header-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1><a class="navbar-brand" href="/diplomatiki/loggedin/">MyProject</a></h1>
+                    </div>
 
-	<body>
-		{% block content %}
-        {% endblock %}
-    </body>
+                    <!--Items-->
+                    <div class = "collapse navbar-collapse" id="topNavBar">
+
+                        <ul class = "nav navbar-nav">
+                            <li class = "">
+                                <a href = "/diplomatiki/userindex/">
+                                    <span class = "glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp; Users
+                                </a>
+                            </li>
+                            <li class = "">
+                                <a href = "/diplomatiki/semanticusers/">
+                                    <span class = "glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp; Semantic Users
+                                </a>
+                            </li>
+                            <li class = "">
+                                <a href = "/diplomatiki/index/">
+                                    <span class = "glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp; Activities
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </nav>
+    {% block body %}
+    {% endblock %}
+</body>
 </html>

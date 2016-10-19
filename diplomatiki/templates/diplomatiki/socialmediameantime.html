@@ -1,0 +1,28 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+
+    <h2>Mean Time spent in Social Media/User</h2>
+    <table class="gridtable">
+        <thead>
+            <tr>
+                <th><h3>Usernamev</h3></th>
+                <th><h3>Social Media Mean Time</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data.results.bindings %}
+                <tr>
+                    <td>
+                        <h3>{{ record.Name.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.Meantime.value }} </h3>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <p></p>
+    <h3><a href="https://dydra.com/alvertisjo/finalontology/socialmediameantime.html">Endpoint URL</a></h3>
+
+{% endblock %}

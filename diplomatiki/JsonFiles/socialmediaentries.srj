@@ -1,0 +1,43 @@
+{
+  "head": {
+    "vars": [
+      "Username",
+      "Activity",
+      "ActivityEntries"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "1",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      }
+    ]
+  }
+}

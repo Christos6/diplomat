@@ -1,0 +1,39 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+    <h3>The users have the following common activities</h3>
+    <table class="gridtable">
+        <thead>
+            <tr>
+               <th><h3>Common Activities</h3></th>
+                <th><h3>Activity Entries</h3></th>
+                <th><h3>Activity Frequency</h3></th>
+                <th><h3>Activity Mean Time</h3></th>
+                <th><h3>Compare Between Users</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data.results.bindings  %}
+                <tr>
+                    <td>
+                        <h3>{{ record.CommonActivities.value }}</h3>
+                    </td>
+                    <td>
+                        <h3><a href={{record.ActivityEntries.value}}> {{ record.ActivityEntries.name }} </a></h3>
+                    </td>
+                    <td>
+                        <h3><a href={{record.ActivityFrequency.value}}> {{ record.ActivityFrequency.name }} </a></h3>
+                    </td>
+                    <td>
+                        <h3><a href={{record.ActivityMeanTime.value}}> {{ record.ActivityMeanTime.name }} </a></h3>
+                    </td>
+                    <td>
+                        <h3><a href={{record.CompareActivity.value}}> {{ record.CompareActivity.name }} </a></h3>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p></p>
+    <h3><a href="https://dydra.com/alvertisjo/finalontology/commonactivities.html">Endpoint URL</a></h3>
+
+{% endblock %}

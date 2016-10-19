@@ -1,0 +1,148 @@
+{
+  "head": {
+    "vars": [
+      "Username",
+      "Activity",
+      "ActivityEntries"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "statusupdate"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "2",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "videowatching"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "7",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "running"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "statusupdate"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "8",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "running"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "5",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "videoupload"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "shareretweet"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Username": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "ActivityEntries": {
+          "type": "literal",
+          "value": "1",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      }
+    ]
+  }
+}

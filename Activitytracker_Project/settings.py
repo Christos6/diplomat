@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
@@ -53,7 +54,6 @@ INSTALLED_APPS = (
     'compressor',
 
     # comments app
-    'django.contrib.sites',
     'django_comments',
 
     # Projects app - access to CloudTeams Projects & related functionality
@@ -134,7 +134,7 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'activitytracker/static'
+STATIC_ROOT = 'diplomatiki/static'
 #STATIC_ROOT = '/home/user/aggelos/final/activity-tracker/activitytracker/static/'
 
 

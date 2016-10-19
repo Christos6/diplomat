@@ -1,0 +1,29 @@
+{
+  "head": {
+    "vars": [
+      "CompareandJudge",
+      "IosifActivityEntries",
+      "ChristosActivityEntries"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "CompareandJudge": {
+          "type": "literal",
+          "value": "Iosif has more activities of this type than Christos"
+        },
+        "IosifActivityEntries": {
+          "type": "literal",
+          "value": "8",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        },
+        "ChristosActivityEntries": {
+          "type": "literal",
+          "value": "2",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      }
+    ]
+  }
+}

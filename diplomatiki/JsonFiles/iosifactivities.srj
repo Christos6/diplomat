@@ -1,0 +1,41 @@
+{
+  "head": {
+    "vars": [
+      "Activity"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "Running"
+        }
+      },
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "Social media browsing"
+        }
+      },
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "Status update"
+        }
+      },
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "Share\/retweet"
+        }
+      },
+      {
+        "Activity": {
+          "type": "literal",
+          "value": "Video upload"
+        }
+      }
+    ]
+  }
+}

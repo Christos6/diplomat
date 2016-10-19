@@ -1,0 +1,28 @@
+{% extends 'diplomatiki/base.html' %}
+{% block body %}
+
+    <h2>Mean Time of Running/User</h2>
+    <table class="gridtable">
+        <thead>
+            <tr>
+                <th><h3>Username</h3></th>
+                <th><h3>Running Mean Time</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data.results.bindings %}
+                <tr>
+                    <td>
+                        <h3>{{ record.Name.value }}</h3>
+                    </td>
+                    <td>
+                        <h3>{{ record.Meantime.value }}</h3>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p></p>
+    <h3><a href="https://dydra.com/alvertisjo/finalontology/runningmeantime.html">Endpoint URL</a></h3>
+
+{% endblock %}

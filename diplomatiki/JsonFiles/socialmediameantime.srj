@@ -1,0 +1,43 @@
+{
+  "head": {
+    "vars": [
+      "Name",
+      "Activity",
+      "Meantime"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Name": {
+          "type": "literal",
+          "value": "Iosif"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "Meantime": {
+          "type": "literal",
+          "value": "3",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer"
+        }
+      },
+      {
+        "Name": {
+          "type": "literal",
+          "value": "Christos"
+        },
+        "Activity": {
+          "type": "literal",
+          "value": "socialmedia"
+        },
+        "Meantime": {
+          "type": "literal",
+          "value": "2.6666667",
+          "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#decimal"
+        }
+      }
+    ]
+  }
+}
